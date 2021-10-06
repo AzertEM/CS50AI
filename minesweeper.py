@@ -224,7 +224,9 @@ class MinesweeperAI():
                 count -= 1
                 continue
             cell_list.add(adj_cell)
-        self.knowledge.append(Sentence(cell_list, count))
+        new_sentence = Sentence(cell_list, count)
+        self.knowledge.append(new_sentence)
+        print(f"Added {new_sentence}")
 
         # Add new known Mine/Safe cells to KB
         # Infer new sentence from KB
